@@ -33,7 +33,6 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public void OnCollisionEnter(Collision collision)
     {
-        print("Collide : " + collision.relativeVelocity.magnitude);
         GetComponent<PlayerHealth>().TakeDamage(collision.relativeVelocity.magnitude);
     }
 }
