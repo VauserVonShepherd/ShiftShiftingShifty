@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour {
+    public static PlayerBehaviour instance;
+
     [SerializeField]
     private float m_RotationSpeed = 1;
     [SerializeField]
@@ -11,6 +13,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     private void Awake()
     {
+        instance = this;
         m_Rigid = GetComponent<Rigidbody>();
     }
 

@@ -29,6 +29,8 @@ public class PlayerHealth : MonoBehaviour {
             if (health <= 0)
             {
                 gameObject.SetActive(false);
+                
+                SceneTransitionManager.instance.RunRestart();
             }
         }
     }

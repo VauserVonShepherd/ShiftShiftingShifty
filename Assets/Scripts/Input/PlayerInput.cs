@@ -20,14 +20,14 @@ public class PlayerInput : MonoBehaviour {
         instance = this;
 
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
         mobileController.SetActive(false);
 #endif
     }
 
     public void Update()
     {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
         HInput = Input.GetAxisRaw("Horizontal");
 #endif
 
@@ -36,7 +36,7 @@ public class PlayerInput : MonoBehaviour {
             HInput = LeftJoystick.instance.GetInputDirection().x;
 #endif
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
         JumpInput = Input.GetKeyDown(KeyCode.Space);
         ChangeInput = Input.GetKeyDown(KeyCode.LeftShift);
     #endif
