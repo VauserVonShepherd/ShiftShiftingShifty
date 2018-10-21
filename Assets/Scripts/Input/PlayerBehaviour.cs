@@ -21,7 +21,17 @@ public class PlayerBehaviour : MonoBehaviour {
     {
         float hSpeed = PlayerInput.instance.GetHInput() * m_RotationSpeed;
 
-        m_Rigid.AddTorque(new Vector3(0,0,-hSpeed));
+        //m_Rigid.AddTorque(new Vector3(0,0,-hSpeed));
+
+        if (GetComponent<PlayerChangeShape>().shapeVal == 0)
+        {
+            //if square then half the rotation force
+            m_Rigid.AddTorque(new Vector3(0, 0, -hSpeed * 0.5f));
+        }
+        else
+        {
+            m_Rigid.AddTorque(new Vector3(0, 0, -hSpeed));
+        }
 
         if (PlayerInput.instance.JumpInput)
         {

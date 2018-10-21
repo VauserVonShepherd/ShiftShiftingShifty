@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerChangeShape : MonoBehaviour {
     public static PlayerChangeShape instance;
 
+    public int shapeVal = 0;
+
     [SerializeField]
     private GameObject[] ShapeList;
-    private int shapeVal = 0;
 
     private void Awake()
     {
