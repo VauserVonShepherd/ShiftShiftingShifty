@@ -9,4 +9,13 @@ public class Spinner : MonoBehaviour {
 	void FixedUpdate () {
         GetComponent<Rigidbody>().AddTorque(new Vector3(0, 0, turnSpeed));
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<PlayerHealth>())
+        {
+            //Take instant damage on spinner
+            other.GetComponent<PlayerHealth>().TakeInstantDamage(0.05f);
+        }
+    }
 }

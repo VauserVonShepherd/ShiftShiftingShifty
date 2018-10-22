@@ -30,6 +30,6 @@ public class SceneTransitionManager : MonoBehaviour {
     
     public void LoadMenu()
     {
-        SceneManager.LoadScene("MainMenu ");
+        SceneManager.LoadScene("MainMenu");
     }
 }

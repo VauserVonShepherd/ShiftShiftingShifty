@@ -19,7 +19,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     private void Update()
     {
-        float hSpeed = PlayerInput.instance.GetHInput() * m_RotationSpeed;
+        float hSpeed = getHSpeed();
 
         //m_Rigid.AddTorque(new Vector3(0,0,-hSpeed));
 
@@ -37,6 +37,13 @@ public class PlayerBehaviour : MonoBehaviour {
         {
             Jump();
         }
+    }
+    
+    public float getHSpeed()
+    {
+        float hSpeed = PlayerInput.instance.GetHInput() * m_RotationSpeed;
+
+        return hSpeed;
     }
 
     public void Jump()

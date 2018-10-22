@@ -35,6 +35,14 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
+    public void TakeInstantDamage(float damage)
+    {
+        health -= damage;
+
+        transform.localScale = new Vector3(health, health, health);
+
+    }
+
     public void IncreaseHealth(float healthVal)
     {
         if (health < 1)

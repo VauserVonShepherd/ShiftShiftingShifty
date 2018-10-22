@@ -6,10 +6,20 @@ public class Interactable_Healing : MonoBehaviour {
 
     public void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<PlayerHealth>() &&
-            other.GetComponent<Rigidbody>().velocity.magnitude > 1)
+        //if play is in mud
+        if (other.GetComponent<PlayerHealth>())
         {
-            other.GetComponent<PlayerHealth>().IncreaseHealth(Time.deltaTime * 0.1f);
+            if (other.transform.position.y < transform.position.y + transform.localScale.y * 0.5f)
+            {
+                other.GetComponent<Rigidbody>().velocity += Vector3.up * 0.25f + Vector3.right * 
+                    other.GetComponent<PlayerBehaviour>().getHSpeed() * Time.deltaTime * 0.1f;
+            }
+
+            //if it's moving
+             if (other.GetComponent<Rigidbody>().velocity.magnitude > 1)
+            {
+                other.GetComponent<PlayerHealth>().IncreaseHealth(Time.deltaTime * 0.1f);
+            }
         }
     }
 }
