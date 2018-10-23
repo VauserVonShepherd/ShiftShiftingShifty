@@ -23,9 +23,8 @@ public class SceneTransitionManager : MonoBehaviour {
 
     public IEnumerator RestartScene()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
     }
     
     public void LoadMenu()

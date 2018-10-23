@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour {
     public static PlayerBehaviour instance;
 
+    public float speedModifier = 100; //100 = 100%, 50 = 50% speed
+    public float JumpModifier = 100; //100 = 100% Strength, 50% = 50% Jump strength
+    
     [SerializeField]
     private float m_RotationSpeed = 1;
     [SerializeField]
@@ -19,7 +22,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     private void Update()
     {
-        float hSpeed = getHSpeed();
+        float hSpeed = getHSpeed() * (0.01f * speedModifier);
 
         //m_Rigid.AddTorque(new Vector3(0,0,-hSpeed));
 
@@ -48,7 +51,12 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public void Jump()
     {
-        m_Rigid.velocity = transform.up * m_JumpForce;
+        m_Rigid.velocity = transform.up * m_JumpForce * (0.01f * JumpModifier);
+
+        if(speedModifier < 100)
+        {
+            GetComponent<PlayerState>().JumpCheck();
+        }
     }
 
     public void OnCollisionEnter(Collision collision)
