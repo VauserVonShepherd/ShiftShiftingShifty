@@ -1966,6 +1966,26 @@ Prefab:
       propertyPath: m_Name
       value: Player_GUI (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114935442662403548, guid: 2cb4a657db6e0f2488bedd0f696d1df1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695216553}
+    - target: {fileID: 114935442662403548, guid: 2cb4a657db6e0f2488bedd0f696d1df1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeShape
+      objectReference: {fileID: 0}
+    - target: {fileID: 114825068447829726, guid: 2cb4a657db6e0f2488bedd0f696d1df1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695216554}
+    - target: {fileID: 114825068447829726, guid: 2cb4a657db6e0f2488bedd0f696d1df1,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Jump
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cb4a657db6e0f2488bedd0f696d1df1, type: 2}
   m_IsPrefabAsset: 0
@@ -3196,6 +3216,18 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a00d52b17fdaf3f499bb539cfec1edc9, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1695216553 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114406919022017658, guid: a00d52b17fdaf3f499bb539cfec1edc9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1695216552}
+  m_Script: {fileID: 11500000, guid: fd7f4094e0fb0064796724bd51506067, type: 3}
+--- !u!114 &1695216554 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114662116962589596, guid: a00d52b17fdaf3f499bb539cfec1edc9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1695216552}
+  m_Script: {fileID: 11500000, guid: 2bc5c541147e3d1409c19255c35b0efa, type: 3}
 --- !u!1 &1706250123
 GameObject:
   m_ObjectHideFlags: 0

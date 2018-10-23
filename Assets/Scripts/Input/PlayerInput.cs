@@ -32,8 +32,7 @@ public class PlayerInput : MonoBehaviour {
 #endif
 
 #if UNITY_ANDROID
-        else
-            HInput = LeftJoystick.instance.GetInputDirection().x;
+        HInput = LeftJoystick.instance.GetInputDirection().x;
 #endif
 
 #if UNITY_EDITOR || UNITY_STANDALONE_WIN

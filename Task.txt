@@ -1,0 +1,11 @@
+Level 3 - Level too big
+Solution - Make smaller (Compress the sections)
+
+Level 2 - The forcing to be small section is too tedious, make it easier.
+Solution - Fixed ball drop and calculate the damage, Slider that damages you over time.
+
+Level 4 - Ball and spinner do not collide
+Reason - Inconsistency in hit.
+
+Ball dismiss blocking camera
+Solution - Push the ball back to the background
