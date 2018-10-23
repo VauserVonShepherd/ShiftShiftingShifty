@@ -25,8 +25,6 @@ public class Blower : BaseBehaviour_Cooldown {
             GetComponent<Renderer>().material.color.b,
             GetComponent<Renderer>().material.color.g,
             (Cooldown - currCooldown) / Cooldown);
-
-        print((Cooldown - currCooldown) / Cooldown );
     }
 
     public void Blow()
