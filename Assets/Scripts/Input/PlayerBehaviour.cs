@@ -7,12 +7,16 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public float speedModifier = 100; //100 = 100%, 50 = 50% speed
     public float JumpModifier = 100; //100 = 100% Strength, 50% = 50% Jump strength
+    private bool IsJumpCharging = false;
     
     [SerializeField]
     private float m_RotationSpeed = 1;
     [SerializeField]
     private float m_JumpForce = 5;
     private Rigidbody m_Rigid;
+
+    [SerializeField]
+    private Material playerMat;
 
     private void Awake()
     {
@@ -38,7 +42,27 @@ public class PlayerBehaviour : MonoBehaviour {
 
         if (PlayerInput.instance.JumpInput)
         {
+            IsJumpCharging = true;
+
+            JumpModifier += Time.deltaTime * 30;
+            GetComponent<Rigidbody>().drag += Time.deltaTime * 10;
+            GetComponent<Rigidbody>().angularDrag += Time.deltaTime * 10;
+
+            playerMat.color = new Color(1, (200 - JumpModifier) /200, (200 - JumpModifier) / 200);
+            if(JumpModifier >= 200)
+            {
+                Jump();
+                GetComponent<Rigidbody>().drag = 0;
+                GetComponent<Rigidbody>().angularDrag = 0.05f;
+                PlayerInput.instance.JumpInput = false;
+            }
+        }
+        
+        if (IsJumpCharging && !PlayerInput.instance.JumpInput)
+        {
             Jump();
+            GetComponent<Rigidbody>().drag = 0;
+            GetComponent<Rigidbody>().angularDrag = 0.05f;
         }
     }
     
@@ -57,6 +81,16 @@ public class PlayerBehaviour : MonoBehaviour {
         {
             GetComponent<PlayerState>().JumpCheck();
         }
+
+        if (JumpModifier >= 150)
+        {
+            GetComponent<PlayerHealth>().TakeInstantDamage((JumpModifier * 0.0005f));
+        }
+
+        JumpModifier = 100;
+        IsJumpCharging = false;
+
+        playerMat.color = new Color(1, 1, 1);
     }
 
     public void OnCollisionEnter(Collision collision)

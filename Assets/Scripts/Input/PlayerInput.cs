@@ -36,7 +36,18 @@ public class PlayerInput : MonoBehaviour {
 #endif
 
 #if UNITY_EDITOR || UNITY_STANDALONE_WIN
-        JumpInput = Input.GetKeyDown(KeyCode.Space);
+        //JumpInput = Input.GetKeyDown(KeyCode.Space) ? true : false;
+        //JumpInput = Input.GetKeyUp(KeyCode.Space) ? false :true;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            JumpInput = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            JumpInput = false;
+        }
+
         ChangeInput = Input.GetKeyDown(KeyCode.LeftShift);
     #endif
     }
