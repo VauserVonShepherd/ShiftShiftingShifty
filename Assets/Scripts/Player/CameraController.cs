@@ -53,9 +53,13 @@ public class CameraController : MonoBehaviour {
         }
     }
 
+    public void ShakeForTime(float duration)
+    {
+        StartCoroutine(Shake(duration,0.1f));
+    }
+
     public IEnumerator Shake(float duration, float magnitude)
     {
-
         float elapsed = 0.0f;
 
         Vector3 originalCamPos = transform.position;
