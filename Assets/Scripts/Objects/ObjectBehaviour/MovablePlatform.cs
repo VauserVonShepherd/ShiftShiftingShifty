@@ -7,7 +7,7 @@ public class MovablePlatform : MonoBehaviour {
 
     private void Update()
     {
-        if(Vector3.Magnitude(touchPosition - PlayerBehaviour.instance.transform.position) > 1)
+        if(Vector3.Magnitude(touchPosition - PlayerBehaviour.instance.transform.position) > 20)
         {
             touchPosition = Vector3.zero;
             PlayerBehaviour.instance.transform.parent = null;
@@ -19,7 +19,7 @@ public class MovablePlatform : MonoBehaviour {
         if (other.GetComponent<PlayerBehaviour>())
         {
             other.transform.parent = transform.parent;
-            touchPosition = other.transform.position;
+            touchPosition = other.transform.parent.position;
         }
     }
 }

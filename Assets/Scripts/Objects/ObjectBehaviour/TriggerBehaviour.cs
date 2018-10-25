@@ -4,18 +4,32 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class TriggerBehaviour : MonoBehaviour {
-    public UnityEvent methods;
-    
-    public void CallEvent()
+    public UnityEvent enterMethods;
+    public UnityEvent exitMethods;
+
+    public void CallEventEnter()
     {
-        methods.Invoke();
+        enterMethods.Invoke();
+    }
+    
+    public void CallEventExit()
+    {
+        exitMethods.Invoke();
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerBehaviour>())
         {
-            CallEvent();
+            CallEventEnter();
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<PlayerBehaviour>())
+        {
+            CallEventExit();
         }
     }
 }

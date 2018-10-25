@@ -8,9 +8,7 @@ public class ElevatorManager : MonoBehaviour {
     public bool isActive = false;
 
     [SerializeField]
-    private float Hspeed = 2;
-    [SerializeField]
-    private float Vspeed = 2;
+    private float speed = 2;
 
     [SerializeField]
     private float baseRotation = 30;
@@ -20,15 +18,29 @@ public class ElevatorManager : MonoBehaviour {
     [SerializeField]
     private float timeBeforeStop = 5;
 
+    public TriggerBehaviour[] sectionCheckpoints = new TriggerBehaviour[0];
+    private int currCheckpoint = 0;
+
     // Update is called once per frame
     void Update () {
         if (isActive)
         {
-            platform.Translate((-Vector3.up * Vspeed + Vector3.right* Hspeed) * Time.deltaTime);
+            //platform.Translate((-Vector3.up * Vspeed + Vector3.right* Hspeed) * Time.deltaTime);
 
-            if(Vector3.Magnitude(PlayerBehaviour.instance.transform.position - platform.position) > 20)
+            platform.Translate((sectionCheckpoints[currCheckpoint].transform.position - platform.position).normalized * speed * Time.deltaTime);
+
+            if (Vector3.Magnitude(PlayerBehaviour.instance.transform.position - platform.position) > 20)
             {
                 PlayerHealth.instance.TakeInstantDamage(100);
+            }
+
+            if (Vector3.Magnitude(sectionCheckpoints[currCheckpoint].transform.position - platform.position) < 1)
+            {
+                ++currCheckpoint;
+                if(currCheckpoint >= sectionCheckpoints.Length)
+                {
+                    isActive = false;
+                }
             }
         }
 	}
@@ -36,6 +48,28 @@ public class ElevatorManager : MonoBehaviour {
     public void StartTheElevator()
     {
         StartCoroutine(startElevatorIn());
+    }
+    
+    public void RotatePlatformTrigger(float speed)
+    {
+        StartCoroutine(RotatePlatform(speed));
+    }
+
+    public void setElevatorPace(int paceVal)
+    {
+        switch (paceVal) {
+            case 1:
+                speed = 3;
+                break;
+
+            case 2:
+                speed = 6;
+                break;
+
+            case 3:
+                speed = 9;
+                break;
+        }
     }
 
     //Pivot the platform for difficulty

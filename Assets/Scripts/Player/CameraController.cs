@@ -66,7 +66,6 @@ public class CameraController : MonoBehaviour {
 
         while (elapsed < duration)
         {
-
             elapsed += Time.deltaTime;
 
             float percentComplete = elapsed / duration;
@@ -78,7 +77,7 @@ public class CameraController : MonoBehaviour {
             x *= magnitude * damper;
             y *= magnitude * damper;
 
-            Camera.main.transform.position = new Vector3(transform.position.x + x, transform.position.y + y, originalCamPos.z);
+            Camera.main.transform.position = new Vector3(transform.position.x + x, transform.position.y + y, transform.position.z);
 
             yield return null;
         }

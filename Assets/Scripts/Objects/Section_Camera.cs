@@ -9,6 +9,7 @@ public class Section_Camera : TriggerBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        base.OnTriggerEnter(other);
         if (other.GetComponent<PlayerBehaviour>())
         {
             CameraController.instance.InsertNewCamStat(newCamHeight, newCamDistance, newCamLerpSpeed);
