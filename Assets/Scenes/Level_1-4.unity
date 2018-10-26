@@ -501,6 +501,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86324103d2b494648849e1c055c04453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterMethods:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  exitMethods:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   newCamLerpSpeed: 5
   newCamDistance: 20
   newCamHeight: 1
@@ -2948,7 +2958,7 @@ Prefab:
     - target: {fileID: 114042601463061784, guid: 3155399bc52d6554cb2a12127304eb07,
         type: 2}
       propertyPath: sceneToLoad
-      value: MainMenu
+      value: Level_1-5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3155399bc52d6554cb2a12127304eb07, type: 2}
@@ -4276,6 +4286,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86324103d2b494648849e1c055c04453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterMethods:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  exitMethods:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   newCamLerpSpeed: 5
   newCamDistance: 30
   newCamHeight: 1
@@ -4376,6 +4396,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86324103d2b494648849e1c055c04453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterMethods:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  exitMethods:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   newCamLerpSpeed: 1
   newCamDistance: 10
   newCamHeight: 1
@@ -4658,6 +4688,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86324103d2b494648849e1c055c04453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterMethods:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  exitMethods:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   newCamLerpSpeed: 5
   newCamDistance: 20
   newCamHeight: 1
@@ -6633,6 +6673,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86324103d2b494648849e1c055c04453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterMethods:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  exitMethods:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   newCamLerpSpeed: 5
   newCamDistance: 20
   newCamHeight: 1
@@ -6926,6 +6976,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86324103d2b494648849e1c055c04453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterMethods:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  exitMethods:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   newCamLerpSpeed: 2
   newCamDistance: 15
   newCamHeight: 1

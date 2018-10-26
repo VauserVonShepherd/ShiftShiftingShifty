@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 114406919022017658}
   - component: {fileID: 114434959140693092}
   - component: {fileID: 135640373826530550}
+  - component: {fileID: 65524047457667104}
+  - component: {fileID: 114532720134738848}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -148,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1032406838580334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.2, y: -52.4, z: 0}
+  m_LocalPosition: {x: -51.2, y: 22.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4257064078645920}
@@ -365,6 +367,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65524047457667104
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1032406838580334}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114406919022017658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -393,6 +407,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   damageModifier: 0.025
+--- !u!114 &114532720134738848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1032406838580334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb7333403050b34eb01e1ce746da9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpBeforeFree: 0
+  stuckedPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &114662116962589596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -404,8 +431,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc5c541147e3d1409c19255c35b0efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedModifier: 100
+  JumpModifier: 100
   m_RotationSpeed: 30
   m_JumpForce: 5
+  playerMat: {fileID: 2100000, guid: 5630e99c46ab4134a9fee3347104529a, type: 2}
 --- !u!135 &135059806391216106
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -428,5 +458,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.55
   m_Center: {x: 0, y: 0, z: 0}
