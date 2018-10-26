@@ -96,5 +96,10 @@ public class PlayerBehaviour : MonoBehaviour {
     public void OnCollisionEnter(Collision collision)
     {
         GetComponent<PlayerHealth>().TakeDamage(collision.relativeVelocity.magnitude);
+
+        if (collision.collider.GetComponent<Breakable>())
+        {
+            collision.collider.GetComponent<Breakable>().TakeDamageBySpeed(collision.relativeVelocity.magnitude);
+        }
     }
 }

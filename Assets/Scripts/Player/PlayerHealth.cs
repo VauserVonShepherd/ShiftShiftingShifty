@@ -41,6 +41,12 @@ public class PlayerHealth : MonoBehaviour {
 
         transform.localScale = new Vector3(health, health, health);
 
+        if (health <= 0)
+        {
+            gameObject.SetActive(false);
+
+            SceneTransitionManager.instance.RunRestart();
+        }
     }
 
     public void IncreaseHealth(float healthVal)
