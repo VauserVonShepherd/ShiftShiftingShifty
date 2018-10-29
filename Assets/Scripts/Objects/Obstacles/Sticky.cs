@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Sticky : MonoBehaviour {
+    public float SpeedDebuffVal = 15;
 
     private void OnTriggerStay(Collider other)
     {
@@ -18,7 +19,7 @@ public class Sticky : MonoBehaviour {
         {
             PlayerBehaviour player = other.GetComponent<PlayerBehaviour>();
             other.GetComponent<PlayerState>().Stuck(2,2,1);
-            player.speedModifier = 15;
+            player.speedModifier = SpeedDebuffVal;
         }
     }
 

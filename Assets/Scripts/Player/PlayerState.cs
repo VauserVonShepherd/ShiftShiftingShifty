@@ -50,5 +50,6 @@ public class PlayerState : MonoBehaviour {
     {
         GetComponent<Rigidbody>().drag = 0;
         GetComponent<PlayerBehaviour>().speedModifier = 100;
+        JumpBeforeFree = 0;
     }
 }

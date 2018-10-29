@@ -85,6 +85,7 @@ public class PlayerBehaviour : MonoBehaviour {
         if (JumpModifier >= 150)
         {
             GetComponent<PlayerHealth>().TakeInstantDamage((JumpModifier * 0.0005f));
+            GetComponent<PlayerState>().UnStuck();
         }
 
         JumpModifier = 100;
