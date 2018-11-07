@@ -57,4 +57,10 @@ public class PlayerHealth : MonoBehaviour {
         }
         transform.localScale = new Vector3(health, health, health);
     }
+
+    public void IncreaseMaxHealth(float healthVal)
+    {
+        health += healthVal;
+        transform.localScale = new Vector3(health, health, health);
+    }
 }

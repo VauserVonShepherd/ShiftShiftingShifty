@@ -8,7 +8,9 @@ public class PlayerBehaviour : MonoBehaviour {
     public float speedModifier = 100; //100 = 100%, 50 = 50% speed
     public float JumpModifier = 100; //100 = 100% Strength, 50% = 50% Jump strength
     private bool IsJumpCharging = false;
-    
+
+    public float SuperChargeModifier = 100;
+
     [SerializeField]
     private float m_RotationSpeed = 1;
     [SerializeField]
