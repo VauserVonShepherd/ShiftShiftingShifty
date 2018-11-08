@@ -3,6 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KrakenArmJoint : Breakable {
+    public KrakenArm armController;
+
+    float maxHealth;
+
+    private void Start()
+    {
+        armController = transform.parent.GetComponent<KrakenArm>();
+
+        maxHealth = health;
+    }
 
     public override void TakeDamageBySpeed(float speed)
     {
@@ -12,9 +22,23 @@ public class KrakenArmJoint : Breakable {
             GetComponent<Renderer>().material.color.r,
             GetComponent<Renderer>().material.color.b,
             GetComponent<Renderer>().material.color.g,
-        (health / 100));
+        (health / maxHealth));
+        
+    }
 
-        //(100 - health) / 100);
+    public override void Die()
+    {
+        if (GetComponent<HingeJoint>())
+        {
+            //Destroy(GetComponent<HingeJoint>().connectedBody.GetComponent<HingeJoint>());
+            Destroy(GetComponent<HingeJoint>());
+
+            GetComponent<Rigidbody>().useGravity = true;
+            GetComponent<Rigidbody>().velocity -= Vector3.forward * 20;
+
+            armController.armlast.GetComponent<Rigidbody>().useGravity = true;
+            armController.enabled = false;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -22,6 +46,7 @@ public class KrakenArmJoint : Breakable {
         if (collision.collider.GetComponent<PlayerHealth>())
         {
             TakeDamageBySpeed(collision.relativeVelocity.magnitude);
+            collision.collider.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 }

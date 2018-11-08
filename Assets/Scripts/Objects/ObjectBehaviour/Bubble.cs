@@ -17,11 +17,14 @@ public class Bubble : MonoBehaviour {
 
     private void Update()
     {
+        Vector3 targetLocation = new Vector3(startingPos.x, transform.position.y, 0);
+
         transform.position = Vector3.Lerp(transform.position,
-            startingPos + new Vector3(isRight? maxHorizontal : -maxHorizontal, 0),
+            targetLocation + new Vector3(isRight? maxHorizontal : -maxHorizontal, 0),
             Time.deltaTime);
 
-        if(Vector3.Magnitude(startingPos + new Vector3(isRight ? maxHorizontal : -maxHorizontal, 0) - transform.position) < 0.2f)
+
+        if(Vector3.Magnitude(targetLocation + new Vector3(isRight ? maxHorizontal : -maxHorizontal, 0) - transform.position) < 0.2f)
         {
             isRight = !isRight;
         }
@@ -33,6 +36,7 @@ public class Bubble : MonoBehaviour {
         {
             other.GetComponent<PlayerBehaviour>().JumpModifier = 400;
             other.GetComponent<PlayerHealth>().IncreaseMaxHealth((1f- other.GetComponent<PlayerHealth>().health) + 1);
+            Destroy(gameObject);
         }
     }
 }

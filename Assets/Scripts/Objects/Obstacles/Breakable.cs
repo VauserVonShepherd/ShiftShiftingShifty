@@ -10,7 +10,12 @@ public class Breakable : MonoBehaviour {
         health -= speed;
         if(health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    public virtual void Die()
+    {
+        Destroy(gameObject);
     }
 }

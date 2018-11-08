@@ -1,26 +1,20 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoulderSpawner : MonoBehaviour {
-    public float CD = 5;
-    private float currentCD;
+public class BoulderSpawner : SpawnerBase {
 
-    public GameObject boulderPrefab;
+    private void Update()
+    {
+        RunSpawnerCooldown();
+    }
 
-    public int amountPerSpawn = 3;
-
-	// Update is called once per frame
-	void Update () {
-        currentCD -= Time.deltaTime;
-
-        if(currentCD <= 0)
+    protected override void Spawn()
+    {
+        for (int i = 0; i < amountPerSpawn; i++)
         {
-            for(int i = 0; i < amountPerSpawn; i++)
-            {
-                GameObject boulder = GameObject.Instantiate(boulderPrefab, transform.position + Vector3.up * i * 2, Quaternion.identity);
-            }
-            currentCD = CD;
+            GameObject spawnedObject = GameObject.Instantiate(boulderPrefab, transform.position + Vector3.up * i * 2, Quaternion.identity);
         }
-	}
+    }
 }
