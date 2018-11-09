@@ -90,7 +90,12 @@ public class PlayerBehaviour : MonoBehaviour {
             GetComponent<PlayerState>().UnStuck();
         }
 
-        JumpModifier = 100;
+        if (JumpModifier >= 400 && transform.localScale.x > 1)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
+            JumpModifier = 100;
         IsJumpCharging = false;
 
         playerMat.color = new Color(1, 1, 1);

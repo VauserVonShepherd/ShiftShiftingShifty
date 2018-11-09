@@ -6,6 +6,9 @@ public class Bubble : MonoBehaviour {
     [SerializeField]
     private float maxHorizontal = 1;
 
+    [SerializeField]
+    private float timeBeforeDestroy = 1;
+
     private Vector3 startingPos;
 
     private bool isRight = true;
@@ -13,6 +16,11 @@ public class Bubble : MonoBehaviour {
     private void Awake()
     {
         startingPos = transform.position;
+    }
+
+    private void Start()
+    {
+        StartCoroutine(DestroyInTime());
     }
 
     private void Update()
@@ -38,5 +46,23 @@ public class Bubble : MonoBehaviour {
             other.GetComponent<PlayerHealth>().IncreaseMaxHealth((1f- other.GetComponent<PlayerHealth>().health) + 1);
             Destroy(gameObject);
         }
+    }
+
+    private IEnumerator DestroyInTime()
+    {
+        yield return new WaitForSeconds(timeBeforeDestroy);
+        StartCoroutine(Disappear());
+    }
+
+    private IEnumerator Disappear()
+    {
+        while (transform.localScale.x > 0)
+        {
+            yield return new WaitForSeconds(0.05f);
+            transform.localScale -= new Vector3(0.05f, 0.05f, 0.05f);
+        }
+
+        Destroy(gameObject);
+        yield return null;
     }
 }

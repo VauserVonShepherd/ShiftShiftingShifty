@@ -10,7 +10,7 @@ public class BubbleSpawner : SpawnerBase {
 
     protected override void Spawn()
     {
-        GameObject spawnedObject = GameObject.Instantiate(boulderPrefab, transform.position + Vector3.up * 2, Quaternion.identity);
+        GameObject spawnedObject = GameObject.Instantiate(boulderPrefab, transform.position, Quaternion.identity);
         spawnedObject.GetComponent<Rigidbody>().velocity = Vector3.up * 1;      
     }
 }

@@ -112,7 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8679d76f7d7ec764780fc96d58f0dea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHorizontal: 3
+  maxHorizontal: 4
+  timeBeforeDestroy: 6
 --- !u!135 &135744463211873114
 SphereCollider:
   m_ObjectHideFlags: 1

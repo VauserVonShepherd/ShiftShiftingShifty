@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class KrakenArmJoint : Breakable {
     public KrakenArm armController;
-
     float maxHealth;
+    
+    public KrakenArmJoint nextJoint, previousJoint;
 
     private void Start()
     {
@@ -37,7 +38,8 @@ public class KrakenArmJoint : Breakable {
             GetComponent<Rigidbody>().velocity -= Vector3.forward * 20;
 
             armController.armlast.GetComponent<Rigidbody>().useGravity = true;
-            armController.enabled = false;
+
+            armController.ReorganizeArm();
         }
     }
 
