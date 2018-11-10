@@ -14,6 +14,7 @@ public class SceneTransitionManager : MonoBehaviour {
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1;
     }
 
     public void RunRestart()
@@ -25,10 +26,12 @@ public class SceneTransitionManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
     
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 }

@@ -19,7 +19,8 @@ public class MainMenuManager : MonoBehaviour {
 
     public void Btn_Continue()
     {
-        CameraController.instance.SetNewFocus(worldOne); 
+        Time.timeScale = 1;
+        CameraController.instance.SetNewFocus(worldOne);
     }
     
     public void Exit()

@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class KrakenArm : MonoBehaviour {
     public Transform armlast;
-
-    public bool FollowPlayer = false;
-
+    
     public Transform[] movementTargetList = new Transform[0];
 
     [SerializeField]
     private List<KrakenArmJoint> armJointList = new List<KrakenArmJoint>();
 
     private int currmovementTargetVal = 0;
-    
+    [SerializeField]
+    private int chaseRange = 7;
+    [SerializeField]
+    private int chaseSpeed = 3;
+
     // Update is called once per frame
     void Update()
     {
@@ -22,8 +24,6 @@ public class KrakenArm : MonoBehaviour {
 
     public void MoveArm()
     {
-        armlast.position = Vector3.MoveTowards(armlast.position, movementTargetList[currmovementTargetVal].position, Time.deltaTime * 7);
-
         if (Vector3.Magnitude(armlast.position - movementTargetList[currmovementTargetVal].position) < 2)
         {
             ++currmovementTargetVal;
@@ -31,6 +31,15 @@ public class KrakenArm : MonoBehaviour {
             {
                 currmovementTargetVal = 0;
             }
+        }
+        
+        if(Vector3.Magnitude(armlast.position - PlayerBehaviour.instance.transform.position) < 5 && chaseRange > 0)
+        {
+            armlast.position = Vector3.MoveTowards(armlast.position, PlayerBehaviour.instance.transform.position, Time.deltaTime * 3);
+        }
+        else
+        {
+            armlast.position = Vector3.MoveTowards(armlast.position, movementTargetList[currmovementTargetVal].position, Time.deltaTime * chaseSpeed);
         }
     }
 
@@ -69,6 +78,11 @@ public class KrakenArm : MonoBehaviour {
         if(armJointList.Count < 3)
         {
             DisableAllJoint();
+            CameraController.instance.ShakeForTime(2);
+        }
+        else{
+
+            CameraController.instance.ShakeForTime(0.5f);
         }
     }
 
@@ -80,7 +94,7 @@ public class KrakenArm : MonoBehaviour {
         {
             joint.GetComponent<Rigidbody>().useGravity = true;
             joint.GetComponent<Collider>().isTrigger = true;
-            transform.parent.GetComponent<KrakenSectionManager>().BreakArm();
         }
+     transform.parent.GetComponent<KrakenSectionManager>().BreakArm();
     }
 }

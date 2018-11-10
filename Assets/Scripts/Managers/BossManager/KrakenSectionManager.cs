@@ -7,6 +7,8 @@ public class KrakenSectionManager : TriggerBehaviour {
 
     public GameObject wallObject;
 
+    public Rigidbody KrakenObj;
+
     public void BreakArm()
     {
         ++ArmBroken;
@@ -15,6 +17,17 @@ public class KrakenSectionManager : TriggerBehaviour {
         if(ArmBroken >= 2)
         {
             wallObject.SetActive(false);
+            DropKraken();
+        }
+    }
+
+    public void DropKraken()
+    {
+        if (KrakenObj)
+        {
+            KrakenObj.useGravity = true;
+            KrakenObj.isKinematic = false;
+            CameraController.instance.ShakeForTime(4);
         }
     }
 }
