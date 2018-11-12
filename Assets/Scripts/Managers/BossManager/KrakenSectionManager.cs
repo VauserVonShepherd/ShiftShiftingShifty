@@ -6,8 +6,25 @@ public class KrakenSectionManager : TriggerBehaviour {
     public int ArmBroken = 0;
 
     public GameObject wallObject;
-
     public Rigidbody KrakenObj;
+
+    public BasicAI[] nextJointToActivate;
+
+    private void Start()
+    {
+        foreach (BasicAI ai in nextJointToActivate)
+        {
+            ai.enabled = false;
+        }
+    }
+
+    public void ActivateNextSection()
+    {
+        foreach(BasicAI ai in nextJointToActivate)
+        {
+            ai.enabled = true;
+        }
+    }
 
     public void BreakArm()
     {
@@ -18,6 +35,7 @@ public class KrakenSectionManager : TriggerBehaviour {
         {
             wallObject.SetActive(false);
             DropKraken();
+            ActivateNextSection();
         }
     }
 

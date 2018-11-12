@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 38928597}
   - component: {fileID: 38928604}
   m_Layer: 10
-  m_Name: Arm (5)
+  m_Name: Arm_Shooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +237,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5000005, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0030937784, y: -0.74673766, z: 0}
+  m_ConnectedAnchor: {x: 0.0030928545, y: -0.74673766, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 80
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1531710649}
   previousJoint: {fileID: 880125149}
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1129530422}
   previousJoint: {fileID: 1919899608}
@@ -1457,6 +1457,9 @@ MonoBehaviour:
   ArmBroken: 0
   wallObject: {fileID: 577479133}
   KrakenObj: {fileID: 0}
+  nextJointToActivate:
+  - {fileID: 691139133}
+  - {fileID: 203708993}
 --- !u!1 &142878916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,7 +1644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 0}
   previousJoint: {fileID: 2120714966}
@@ -1859,7 +1862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 80
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 389221163}
   previousJoint: {fileID: 203708987}
@@ -2091,7 +2094,7 @@ GameObject:
   - component: {fileID: 203708987}
   - component: {fileID: 203708993}
   m_Layer: 10
-  m_Name: Arm (3)
+  m_Name: Arm_Shooty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2336,6 +2339,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 238681485}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &252978803 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114394337887432288, guid: 7453f38a5f30ff749918603e1fea5f6a,
+    type: 2}
+  m_PrefabInternal: {fileID: 403911425}
+  m_Script: {fileID: 11500000, guid: 61eed66a50d46ef4e850010d917dd979, type: 3}
 --- !u!1 &253104089
 GameObject:
   m_ObjectHideFlags: 0
@@ -2578,7 +2587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 80
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 0}
   previousJoint: {fileID: 1925678970}
@@ -2884,7 +2893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 0}
   previousJoint: {fileID: 717814395}
@@ -3062,7 +3071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 80
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1104507956}
   previousJoint: {fileID: 165875698}
@@ -3253,7 +3262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1160808639}
   previousJoint: {fileID: 1040247930}
@@ -3928,7 +3937,7 @@ GameObject:
   - component: {fileID: 472508551}
   - component: {fileID: 472508558}
   m_Layer: 10
-  m_Name: Arm (5)
+  m_Name: Arm_Shooty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4506,7 +4515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1860037540}
   previousJoint: {fileID: 1248697372}
@@ -4671,7 +4680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1040247930}
   previousJoint: {fileID: 711025494}
@@ -5388,6 +5397,12 @@ MonoBehaviour:
   - {fileID: 558930797}
   chaseRange: 0
   chaseSpeed: 3
+--- !u!114 &621763647 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114394337887432288, guid: 7453f38a5f30ff749918603e1fea5f6a,
+    type: 2}
+  m_PrefabInternal: {fileID: 879918027}
+  m_Script: {fileID: 11500000, guid: 61eed66a50d46ef4e850010d917dd979, type: 3}
 --- !u!1 &675870554
 GameObject:
   m_ObjectHideFlags: 0
@@ -5423,6 +5438,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &680004733 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114394337887432288, guid: 7453f38a5f30ff749918603e1fea5f6a,
+    type: 2}
+  m_PrefabInternal: {fileID: 111788072}
+  m_Script: {fileID: 11500000, guid: 61eed66a50d46ef4e850010d917dd979, type: 3}
 --- !u!1 &680708542
 GameObject:
   m_ObjectHideFlags: 0
@@ -5621,7 +5642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1772497689}
   previousJoint: {fileID: 1098611160}
@@ -5756,7 +5777,7 @@ GameObject:
   - component: {fileID: 691139127}
   - component: {fileID: 691139133}
   m_Layer: 10
-  m_Name: Arm (3)
+  m_Name: Arm_Shooty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5958,7 +5979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 539513578}
   previousJoint: {fileID: 0}
@@ -6123,7 +6144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 383361775}
   previousJoint: {fileID: 1860037540}
@@ -6624,7 +6645,7 @@ GameObject:
   - component: {fileID: 774043872}
   - component: {fileID: 774043878}
   m_Layer: 10
-  m_Name: Arm (6)
+  m_Name: Arm_Shooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6668,7 +6689,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5000005, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -30.992851, y: -30.854155, z: 0.5087675}
+  m_ConnectedAnchor: {x: -30.992857, y: -30.854158, z: 0.5087675}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -6846,7 +6867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 0}
   previousJoint: {fileID: 1672496057}
@@ -7241,7 +7262,7 @@ GameObject:
   - component: {fileID: 880125149}
   - component: {fileID: 880125156}
   m_Layer: 10
-  m_Name: Arm (4)
+  m_Name: Arm_Shooty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7825,6 +7846,13 @@ MonoBehaviour:
   ArmBroken: 0
   wallObject: {fileID: 1026607764}
   KrakenObj: {fileID: 0}
+  nextJointToActivate:
+  - {fileID: 1098611167}
+  - {fileID: 38928604}
+  - {fileID: 774043878}
+  - {fileID: 880125156}
+  - {fileID: 472508558}
+  - {fileID: 1456390819}
 --- !u!1 &947137107
 GameObject:
   m_ObjectHideFlags: 0
@@ -8327,6 +8355,7 @@ MonoBehaviour:
   ArmBroken: 0
   wallObject: {fileID: 974671503}
   KrakenObj: {fileID: 1689164556}
+  nextJointToActivate: []
 --- !u!1001 &993341879
 Prefab:
   m_ObjectHideFlags: 0
@@ -8854,7 +8883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1040247930}
   previousJoint: {fileID: 539513578}
@@ -9342,7 +9371,7 @@ GameObject:
   - component: {fileID: 1098611160}
   - component: {fileID: 1098611167}
   m_Layer: 10
-  m_Name: Arm (4)
+  m_Name: Arm_Shooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9373,7 +9402,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5000005, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0018594856, y: -0.7494304, z: 0}
+  m_ConnectedAnchor: {x: 0.0018654163, y: -0.7494327, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -10502,7 +10531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1672496057}
   previousJoint: {fileID: 389534417}
@@ -10740,7 +10769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1248697372}
   previousJoint: {fileID: 1975138889}
@@ -11785,7 +11814,7 @@ GameObject:
   - component: {fileID: 1456390813}
   - component: {fileID: 1456390819}
   m_Layer: 10
-  m_Name: Arm (6)
+  m_Name: Arm_Shooty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12159,7 +12188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 80
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1925678970}
   previousJoint: {fileID: 77690885}
@@ -12350,7 +12379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1975138889}
   previousJoint: {fileID: 0}
@@ -13454,7 +13483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 787950540}
   previousJoint: {fileID: 1160808639}
@@ -13779,6 +13808,12 @@ MonoBehaviour:
   ArmBroken: 0
   wallObject: {fileID: 1434854817}
   KrakenObj: {fileID: 0}
+  nextJointToActivate:
+  - {fileID: 680004733}
+  - {fileID: 621763647}
+  - {fileID: 1926063530}
+  - {fileID: 252978803}
+  - {fileID: 1950295726}
 --- !u!1 &1689164551
 GameObject:
   m_ObjectHideFlags: 0
@@ -13918,7 +13953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 2120714966}
   previousJoint: {fileID: 680743753}
@@ -14183,7 +14218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 717814395}
   previousJoint: {fileID: 536082578}
@@ -14708,7 +14743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 94851285}
   previousJoint: {fileID: 691139127}
@@ -14886,7 +14921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 80
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 306030188}
   previousJoint: {fileID: 1531710649}
@@ -15030,6 +15065,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedDebuffVal: 15
+--- !u!114 &1926063530 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114394337887432288, guid: 7453f38a5f30ff749918603e1fea5f6a,
+    type: 2}
+  m_PrefabInternal: {fileID: 767664490}
+  m_Script: {fileID: 11500000, guid: 61eed66a50d46ef4e850010d917dd979, type: 3}
 --- !u!1001 &1926966558
 Prefab:
   m_ObjectHideFlags: 0
@@ -15170,6 +15211,12 @@ Transform:
   m_Father: {fileID: 122414306}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1950295726 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114394337887432288, guid: 7453f38a5f30ff749918603e1fea5f6a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1926966558}
+  m_Script: {fileID: 11500000, guid: 61eed66a50d46ef4e850010d917dd979, type: 3}
 --- !u!1 &1956414825
 GameObject:
   m_ObjectHideFlags: 0
@@ -15234,7 +15281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 1248697372}
   previousJoint: {fileID: 1534973187}
@@ -15990,7 +16037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 20
   armController: {fileID: 0}
   nextJoint: {fileID: 149430889}
   previousJoint: {fileID: 1772497689}

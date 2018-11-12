@@ -13,6 +13,11 @@ public class KrakenArmJoint : Breakable {
         armController = transform.parent.GetComponent<KrakenArm>();
 
         maxHealth = health;
+
+        if (GetComponent<BasicAI>())
+        {
+            GetComponent<BasicAI>().enabled = false;
+        }
     }
 
     public override void TakeDamageBySpeed(float speed)
@@ -24,7 +29,6 @@ public class KrakenArmJoint : Breakable {
             GetComponent<Renderer>().material.color.b,
             GetComponent<Renderer>().material.color.g,
         (health / maxHealth));
-        
     }
 
     public override void Die()
