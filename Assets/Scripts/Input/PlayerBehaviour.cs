@@ -103,7 +103,12 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public void OnCollisionEnter(Collision collision)
     {
-        GetComponent<PlayerHealth>().TakeDamage(collision.relativeVelocity.magnitude);
+        if(!collision.collider.GetComponent<Breakable>() ||
+            !collision.collider.GetComponent<BasicAI>() ||
+            !collision.collider.GetComponent<ProjectileObject>())
+        {
+            GetComponent<PlayerHealth>().TakeDamage(collision.relativeVelocity.magnitude);
+        }
 
         if (collision.collider.GetComponent<Breakable>())
         {
