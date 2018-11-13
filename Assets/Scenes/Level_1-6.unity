@@ -2893,7 +2893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 0}
   previousJoint: {fileID: 717814395}
@@ -3262,7 +3262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 1160808639}
   previousJoint: {fileID: 1040247930}
@@ -3635,7 +3635,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4054713571138726, guid: d544cae8f32ab8440ba9f0ad827c80b3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -17.043
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4054713571138726, guid: d544cae8f32ab8440ba9f0ad827c80b3, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3663,7 +3663,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4054713571138726, guid: d544cae8f32ab8440ba9f0ad827c80b3, type: 2}
       propertyPath: m_LocalScale.z
-      value: 35.08517
+      value: 6.6661825
       objectReference: {fileID: 0}
     - target: {fileID: 1270623036865118, guid: d544cae8f32ab8440ba9f0ad827c80b3, type: 2}
       propertyPath: m_Name
@@ -4515,7 +4515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 1860037540}
   previousJoint: {fileID: 1248697372}
@@ -4680,7 +4680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 1040247930}
   previousJoint: {fileID: 711025494}
@@ -5979,7 +5979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 539513578}
   previousJoint: {fileID: 0}
@@ -6144,7 +6144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 383361775}
   previousJoint: {fileID: 1860037540}
@@ -6297,11 +6297,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4879678062318732, guid: 3155399bc52d6554cb2a12127304eb07, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -51.13
+      value: -49.81
       objectReference: {fileID: 0}
     - target: {fileID: 4879678062318732, guid: 3155399bc52d6554cb2a12127304eb07, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -58.25
+      value: -71.3
       objectReference: {fileID: 0}
     - target: {fileID: 4879678062318732, guid: 3155399bc52d6554cb2a12127304eb07, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6329,11 +6329,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4879678062318732, guid: 3155399bc52d6554cb2a12127304eb07, type: 2}
       propertyPath: m_LocalScale.x
-      value: 43.906216
+      value: 65.34563
       objectReference: {fileID: 0}
     - target: {fileID: 4879678062318732, guid: 3155399bc52d6554cb2a12127304eb07, type: 2}
       propertyPath: m_LocalScale.y
-      value: 15.980582
+      value: 31.641554
       objectReference: {fileID: 0}
     - target: {fileID: 114042601463061784, guid: 3155399bc52d6554cb2a12127304eb07,
         type: 2}
@@ -6867,7 +6867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 0}
   previousJoint: {fileID: 1672496057}
@@ -8369,7 +8369,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4456809061940024, guid: a00d52b17fdaf3f499bb539cfec1edc9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 42
+      value: 40.6
       objectReference: {fileID: 0}
     - target: {fileID: 4456809061940024, guid: a00d52b17fdaf3f499bb539cfec1edc9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8883,7 +8883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 1040247930}
   previousJoint: {fileID: 539513578}
@@ -10531,7 +10531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 1672496057}
   previousJoint: {fileID: 389534417}
@@ -10769,7 +10769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 1248697372}
   previousJoint: {fileID: 1975138889}
@@ -12379,7 +12379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 1975138889}
   previousJoint: {fileID: 0}
@@ -13483,7 +13483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 787950540}
   previousJoint: {fileID: 1160808639}
@@ -13680,8 +13680,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1686772700}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071065, w: 0.7071071}
-  m_LocalPosition: {x: -61.295, y: -1.9063, z: 0}
-  m_LocalScale: {x: 18.298899, y: 0.99979997, z: 1}
+  m_LocalPosition: {x: -61.295, y: -5.92, z: 0}
+  m_LocalScale: {x: 26.332115, y: 0.99979997, z: 1}
   m_Children: []
   m_Father: {fileID: 1956414826}
   m_RootOrder: 0
@@ -14237,7 +14237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 717814395}
   previousJoint: {fileID: 536082578}
@@ -14558,8 +14558,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1877629965}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071065, w: 0.7071071}
-  m_LocalPosition: {x: -19.716, y: -1.9063, z: 0}
-  m_LocalScale: {x: 18.298899, y: 0.99979997, z: 1}
+  m_LocalPosition: {x: -19.716, y: -5.96, z: 0}
+  m_LocalScale: {x: 26.350414, y: 0.99979997, z: 1}
   m_Children: []
   m_Father: {fileID: 1956414826}
   m_RootOrder: 1
@@ -15300,7 +15300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706b4bae91a11cf4a95f5cec324dc0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 13
   armController: {fileID: 0}
   nextJoint: {fileID: 1248697372}
   previousJoint: {fileID: 1534973187}

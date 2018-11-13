@@ -45,6 +45,7 @@ public class KrakenSectionManager : TriggerBehaviour {
         {
             KrakenObj.useGravity = true;
             KrakenObj.isKinematic = false;
+            KrakenObj.GetComponent<Animator>().enabled = false;
             CameraController.instance.ShakeForTime(4);
         }
     }
