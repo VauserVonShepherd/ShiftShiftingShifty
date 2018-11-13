@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1 &31642393
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1001 &129185815
 Prefab:
   m_ObjectHideFlags: 0
@@ -1073,6 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1 &141633861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,6 +2029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1 &459221111
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,6 +3051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1 &774231680
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,6 +3410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1 &967916456
 GameObject:
   m_ObjectHideFlags: 0
@@ -3502,6 +3508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!4 &990263988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4539547417440620, guid: 08b255750a147144fad0734314262c07,
@@ -3776,6 +3783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1 &1081222761
 GameObject:
   m_ObjectHideFlags: 0
@@ -3873,6 +3881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1001 &1086616042
 Prefab:
   m_ObjectHideFlags: 0
@@ -4623,6 +4632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1 &1263685454
 GameObject:
   m_ObjectHideFlags: 0
@@ -4758,7 +4768,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1263882105}
   m_LocalRotation: {x: -0, y: -0, z: -0.2588186, w: 0.965926}
-  m_LocalPosition: {x: 2.85, y: 3.56, z: 0}
+  m_LocalPosition: {x: 2.7711, y: 3.4251, z: 0}
   m_LocalScale: {x: 32.67208, y: 1.68777, z: 1}
   m_Children: []
   m_Father: {fileID: 31642394}
@@ -5417,6 +5427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1 &1552445184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5514,6 +5525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1001 &1588611877
 Prefab:
   m_ObjectHideFlags: 0
@@ -5757,6 +5769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1001 &1650151522
 Prefab:
   m_ObjectHideFlags: 0
@@ -5966,6 +5979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1 &1759430816
 GameObject:
   m_ObjectHideFlags: 0
@@ -6063,6 +6077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1001 &1793722557
 Prefab:
   m_ObjectHideFlags: 0
@@ -6911,6 +6926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7219085df176c5240b5c6b822599ef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedDebuffVal: 15
 --- !u!1 &1963116021
 GameObject:
   m_ObjectHideFlags: 0

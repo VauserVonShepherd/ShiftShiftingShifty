@@ -100,6 +100,12 @@ public class KrakenArm : MonoBehaviour {
         {
             joint.GetComponent<Rigidbody>().useGravity = true;
             joint.GetComponent<Collider>().isTrigger = true;
+
+
+            if (joint.GetComponent<BasicAI>())
+            {
+                joint.GetComponent<BasicAI>().enabled = false;
+            }
         }
      transform.parent.GetComponent<KrakenSectionManager>().BreakArm();
     }

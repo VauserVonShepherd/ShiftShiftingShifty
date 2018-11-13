@@ -108,7 +108,7 @@ public class PlayerBehaviour : MonoBehaviour {
             !collision.collider.GetComponent<BasicAI>() &&
             !collision.collider.GetComponent<ProjectileObject>())
         {
-            if(GetComponent<PlayerHealth>().immunity == 0)
+            if (GetComponent<PlayerHealth>().immunity == 0)
             {
                 GetComponent<PlayerHealth>().TakeDamage(collision.relativeVelocity.magnitude);
             }

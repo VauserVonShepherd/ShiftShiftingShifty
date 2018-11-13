@@ -67,4 +67,15 @@ public class PlayerHealth : MonoBehaviour {
 
         immunity = 1;
     }
+
+    private IEnumerator RunImmunity()
+    {
+        yield return new WaitForSeconds(0.5f);
+        immunity = 0;
+    }
+
+    public void ActivateTemporaryImmunity() {
+        immunity = 1;
+        StartCoroutine(RunImmunity());
+    }
 }
