@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour {
     [SerializeField]
     private float damageModifier = 0.007f;
 
+    public int immunity = 0;
+
     private void Awake()
     {
         instance = this;
@@ -62,5 +64,7 @@ public class PlayerHealth : MonoBehaviour {
     {
         health += healthVal;
         transform.localScale = new Vector3(health, health, health);
+
+        immunity = 1;
     }
 }

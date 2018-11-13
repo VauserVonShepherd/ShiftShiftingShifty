@@ -43,6 +43,11 @@ public class KrakenArmJoint : Breakable {
                 Destroy(GetComponent<BasicAI>());
             }
 
+            if (GetComponent<Sticky>())
+            {
+                PlayerState.instance.UnStuck();
+            }
+
             GetComponent<Rigidbody>().useGravity = true;
             GetComponent<Rigidbody>().velocity -= Vector3.forward * 20;
 

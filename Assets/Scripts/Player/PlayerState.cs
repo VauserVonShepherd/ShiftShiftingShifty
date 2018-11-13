@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerState : MonoBehaviour {
+    public static PlayerState instance;
+
     public int JumpBeforeFree = 0;
 
     public Vector3 stuckedPosition;
 
     private int currJumpCount = 0;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void FixedUpdate()
     {

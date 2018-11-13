@@ -93,6 +93,7 @@ public class PlayerBehaviour : MonoBehaviour {
         if (JumpModifier >= 400 && transform.localScale.x > 1)
         {
             transform.localScale = new Vector3(1, 1, 1);
+            GetComponent<PlayerHealth>().health = 1;
         }
 
             JumpModifier = 100;
@@ -103,11 +104,18 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public void OnCollisionEnter(Collision collision)
     {
-        if(!collision.collider.GetComponent<Breakable>() ||
-            !collision.collider.GetComponent<BasicAI>() ||
+        if(!collision.collider.GetComponent<Breakable>() &&
+            !collision.collider.GetComponent<BasicAI>() &&
             !collision.collider.GetComponent<ProjectileObject>())
         {
-            GetComponent<PlayerHealth>().TakeDamage(collision.relativeVelocity.magnitude);
+            if(GetComponent<PlayerHealth>().immunity == 0)
+            {
+                GetComponent<PlayerHealth>().TakeDamage(collision.relativeVelocity.magnitude);
+            }
+            else
+            {
+                --GetComponent<PlayerHealth>().immunity;
+            }
         }
 
         if (collision.collider.GetComponent<Breakable>())
