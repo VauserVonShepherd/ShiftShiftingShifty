@@ -10,6 +10,8 @@ ModelImporter:
     100008: Cube
     100010: Level
     100012: //RootNode
+    100014: Cave_LowPoly.Extra.001
+    100016: Cave_LowPoly.Extra.003
     400000: Cave_HighPoly
     400002: Cave_HighPoly.Extra
     400004: Cave_LowPoly
@@ -17,6 +19,8 @@ ModelImporter:
     400008: Cube
     400010: Level
     400012: //RootNode
+    400014: Cave_LowPoly.Extra.001
+    400016: Cave_LowPoly.Extra.003
     2100000: CaveMaterial
     2100002: No Name
     2300000: Cave_HighPoly
@@ -26,6 +30,8 @@ ModelImporter:
     2300008: Cube
     2300010: Level
     2300012: //RootNode
+    2300014: Cave_LowPoly.Extra.001
+    2300016: Cave_LowPoly.Extra.003
     3300000: Cave_HighPoly
     3300002: Cave_HighPoly.Extra
     3300004: Cave_LowPoly
@@ -33,12 +39,16 @@ ModelImporter:
     3300008: Cube
     3300010: Level
     3300012: //RootNode
+    3300014: Cave_LowPoly.Extra.001
+    3300016: Cave_LowPoly.Extra.003
     4300000: Cave_LowPoly.Extra
     4300002: Cave_HighPoly.Extra
     4300004: Cave_HighPoly
     4300006: Cave_LowPoly
     4300008: Level
     4300010: Cube
+    4300012: Cave_LowPoly.Extra.001
+    4300014: Cave_LowPoly.Extra.003
   externalObjects: {}
   materials:
     importMaterials: 1
