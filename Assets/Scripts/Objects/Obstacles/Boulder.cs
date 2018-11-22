@@ -16,7 +16,7 @@ public class Boulder : MonoBehaviour {
 
         if (collision.collider.tag == "Disable")
         {
-            GetComponent<Rigidbody>().velocity = -Vector3.forward * 7;
+            GetComponent<Rigidbody>().velocity = -Vector3.forward * 15;
             Destroy(gameObject, 5);
         }
     }
