@@ -82,7 +82,7 @@ public class CameraController : MonoBehaviour {
             yield return null;
         }
 
-        Camera.main.transform.position = originalCamPos;
+        transform.position = originalCamPos;
     }
 
     public void InsertNewCamStat(float height, float distance, float speed)

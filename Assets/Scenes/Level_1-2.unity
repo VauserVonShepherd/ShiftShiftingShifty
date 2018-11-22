@@ -3043,11 +3043,16 @@ Prefab:
     - target: {fileID: 114667083559007838, guid: 08b255750a147144fad0734314262c07,
         type: 2}
       propertyPath: CD
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1548568917838822, guid: 08b255750a147144fad0734314262c07, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114667083559007838, guid: 08b255750a147144fad0734314262c07,
+        type: 2}
+      propertyPath: amountPerSpawn
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b255750a147144fad0734314262c07, type: 2}
